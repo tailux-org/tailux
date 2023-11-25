@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --no-cache --continue",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "turbo": "latest",
+    "@tailux/tsconfig": "workspace:*"
+  },
+  "packageManager": "pnpm@8.10.5"
+}

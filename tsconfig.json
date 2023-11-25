@@ -1,0 +1,3 @@
+{
+  "extends": "@tailux/tsconfig/base.json"
+}

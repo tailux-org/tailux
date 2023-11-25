@@ -1,0 +1,62 @@
+{
+  "name": "@tailux/react",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Emiliano Murillo <emimudev@gmail.com>",
+  "homepage": "",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "reactjs",
+    "tailwind",
+    "tailwindcss",
+    "tailwind-css",
+    "tailwind-components",
+    "tailwind-library",
+    "react-components",
+    "design-system",
+    "wai-aria",
+    "dark-mode",
+    "ui-library",
+    "ui-design",
+    "ui-kit",
+    "ui-framework",
+    "tailux"
+  ],
+  "main": "src/index.ts",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+URL-HERE",
+    "directory": "packages/core/react"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
+    "lint": "eslint src/",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "dependencies": {
+    "@tailux/button": "workspace:*"
+  },
+  "devDependencies": {
+    "@tailux/tsconfig": "workspace:*",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "tsup": "^6.0.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  }
+}
