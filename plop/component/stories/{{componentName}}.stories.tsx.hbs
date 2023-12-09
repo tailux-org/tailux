@@ -1,0 +1,29 @@
+import type { Meta, StoryObj } from '@storybook/react'
+import { {{capitalize componentName}}, type {{capitalize componentName}}Props } from '../src'
+
+const meta: Meta<typeof {{capitalize componentName}}> = {
+  title: 'Components/{{capitalize componentName}}',
+  component: {{capitalize componentName}},
+  argTypes: {}
+}
+
+export default meta
+
+type Story = StoryObj<typeof {{capitalize componentName}}>
+
+/*
+ *👇 Render functions are a framework specific feature to allow you control on how the component renders.
+ * See https://storybook.js.org/docs/react/api/csf
+ * to learn how to use render functions.
+ */
+export const Default: Story = {
+  render: (props: any) => (
+    <{{capitalize componentName}} {...props}>
+      {props.children}
+    </{{capitalize componentName}}>
+  ),
+  name: '{{capitalize componentName}}',
+  args: {
+    children: 'Hello @tailux'
+  } satisfies {{capitalize componentName}}Props
+}

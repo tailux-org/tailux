@@ -1,0 +1,20 @@
+import { forwardRef } from 'react'
+
+export interface {{capitalize componentName}}Props {
+  children: React.ReactNode
+  [key: string]: any
+}
+
+const {{capitalize componentName}} = forwardRef<HTMLDivElement, {{capitalize componentName}}Props>((props, ref) => {
+  const { children, ...rest } = props
+
+  return (
+    <div ref={ref} {...rest}>
+      {children}
+    </div>
+  )
+})
+
+{{capitalize componentName}}.displayName = 'tailux.{{capitalize componentName}}'
+
+export default {{capitalize componentName}}

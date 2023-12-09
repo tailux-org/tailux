@@ -1,0 +1,53 @@
+{
+  "name": "@tailux/{{componentName}}",
+  "version": "0.0.0",
+  "description": "{{description}}",
+  "author": "Emiliano Murillo <emilianomurillo12@gmail.com>",
+  "homepage": "",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "tailwindcss",
+    "tailwind",
+    "components",
+    "react-components",
+    "tailwindcss-components",
+    "{{componentName}}"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tailux-org/tailux.git",
+    "directory": "packages/{{outDir}}/{{componentName}}"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "dev": "tsup src --watch --dts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tailux/tsconfig": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}
