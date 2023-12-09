@@ -18,11 +18,11 @@ const config: StorybookConfig = {
   addons: [
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('@storybook/addon-essentials'),
-    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-docs')
   ],
   framework: {
     name: getAbsolutePath('@storybook/react-vite'),
-    options: {},
+    options: {}
   },
 
   core: {},
@@ -31,7 +31,7 @@ const config: StorybookConfig = {
     // customize the Vite config here
     return {
       ...config,
-      define: { 'process.env': {} },
+      define: { 'process.env': {} }
       // resolve: {
       //   alias: [
       //     {
@@ -44,8 +44,8 @@ const config: StorybookConfig = {
   },
 
   docs: {
-    autodocs: true,
-  },
+    autodocs: true
+  }
 }
 
 export default config

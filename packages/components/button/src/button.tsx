@@ -1,13 +1,20 @@
+import { forwardRef } from 'react'
+
 export interface ButtonProps {
-  variant?: 'primary' | 'secondary'
-  children: any
+  children: React.ReactNode
   [key: string]: any
 }
 
-const Button = ({ children, ...rest }: ButtonProps) => {
-  return <button  {...rest}>{children}</button>
-}
+const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+  const { children, ...rest } = props
 
-Button.displayName = 'Tailux.Button'
+  return (
+    <button ref={ref} {...rest}>
+      {children}
+    </button>
+  )
+})
+
+Button.displayName = 'tailux.Button'
 
 export default Button

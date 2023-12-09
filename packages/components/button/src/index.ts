@@ -1,8 +1,7 @@
 import Button from './button'
 
-// Types
+// export types
 export type { ButtonProps } from './button'
 
-// Components
+// export component
 export { Button }
-

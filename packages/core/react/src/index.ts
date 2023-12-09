@@ -1,2 +1,1 @@
-export * from '@tailux/button';
-
+export * from '@tailux/button'

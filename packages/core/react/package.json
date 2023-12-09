@@ -2,7 +2,7 @@
   "name": "@tailux/react",
   "version": "0.0.0",
   "description": "",
-  "author": "Emiliano Murillo <emimudev@gmail.com>",
+  "author": "Emiliano Murillo <tailux-org@gmail.com>",
   "homepage": "",
   "license": "MIT",
   "keywords": [
@@ -23,7 +23,7 @@
     "ui-framework",
     "tailux"
   ],
-  "main": "src/index.ts",
+  "main": "./dist/index.ts",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
@@ -31,32 +31,33 @@
     "dist/**"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "repository": {
     "type": "git",
-    "url": "git+URL-HERE",
+    "url": "git+https://github.com/tailux-org/tailux.git",
     "directory": "packages/core/react"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
+    "build": "tsup --dts",
+    "dev": "tsup --watch --dts",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint src/",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
   },
   "dependencies": {
     "@tailux/button": "workspace:*"
   },
   "devDependencies": {
     "@tailux/tsconfig": "workspace:*",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "react": "^18.2.0",
-    "tsup": "^6.0.1",
-    "typescript": "^5.2.2"
+    "react": "^18.2.0"
   },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
-  }
+  },
+  "clean-package": "../../../clean-package.config.json"
 }

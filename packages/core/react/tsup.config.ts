@@ -4,6 +4,6 @@ export default defineConfig({
   clean: true,
   target: 'es2019',
   format: ['cjs', 'esm'],
-  banner: { js: '"use client";' },
+  entry: ['src/index.ts'],
   external: ['react']
 })

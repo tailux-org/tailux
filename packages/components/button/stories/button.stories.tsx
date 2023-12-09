@@ -1,14 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Button } from '../src'
+import { Button, type ButtonProps } from '../src'
 
 const meta: Meta<typeof Button> = {
+  title: 'Components/Button',
   component: Button,
-  argTypes: {
-    type: {
-      control: { type: 'radio' },
-      options: ['button', 'submit', 'reset'],
-    },
-  },
+  argTypes: {}
 }
 
 export default meta
@@ -20,27 +16,10 @@ type Story = StoryObj<typeof Button>
  * See https://storybook.js.org/docs/react/api/csf
  * to learn how to use render functions.
  */
-export const Primary: Story = {
-  render: (props: any) => (
-    <Button
-      {...props}
-      onClick={(): void => {
-        // eslint-disable-next-line no-alert -- alert for demo
-        alert('Hello from Turborepo!')
-      }}
-    >
-      {props.children}
-    </Button>
-  ),
+export const Default: Story = {
+  render: (props: any) => <Button {...props}>{props.children}</Button>,
   name: 'Button',
   args: {
-    children: 'Hello @Tailux',
-    type: 'button',
-    style: {
-      color: 'blue',
-      border: '1px solid gray',
-      padding: 10,
-      borderRadius: 10,
-    },
-  },
+    children: 'Hello @tailux'
+  } satisfies ButtonProps
 }
