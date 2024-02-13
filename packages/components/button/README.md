@@ -1,11 +1,11 @@
-# @tailux-org/button
+# @tailux/button
 
 ## Installation
 
 ```sh
-yarn add @tailux-org/button
+yarn add @tailux/button
 # or
-npm i @tailux-org/button
+npm i @tailux/button
 # or
-pnpm add @tailux-org/button
+pnpm add @tailux/button
 ```
