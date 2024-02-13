@@ -16,9 +16,11 @@ const config: StorybookConfig = {
     '../../components/**/*.stories.@(js|jsx|mjs|ts|tsx)'
   ],
   addons: [
-    getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('@storybook/addon-essentials'),
-    getAbsolutePath('@storybook/addon-docs')
+    getAbsolutePath('@storybook/addon-actions'),
+    getAbsolutePath('@storybook/addon-links'),
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-interactions')
   ],
   framework: {
     name: getAbsolutePath('@storybook/react-vite'),
@@ -26,20 +28,11 @@ const config: StorybookConfig = {
   },
 
   core: {},
-
   async viteFinal(config, { configType }) {
     // customize the Vite config here
     return {
       ...config,
       define: { 'process.env': {} }
-      // resolve: {
-      //   alias: [
-      //     {
-      //       find: 'ui',
-      //       replacement: resolve(__dirname, '../../../packages/ui/'),
-      //     },
-      //   ],
-      // },
     }
   },
 

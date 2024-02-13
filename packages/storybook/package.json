@@ -16,19 +16,19 @@
   },
   "devDependencies": {
     "@tailux/tsconfig": "workspace:*",
-    "@storybook/addon-actions": "^7.4.0",
-    "@storybook/addon-docs": "^7.4.0",
-    "@storybook/addon-essentials": "^7.4.0",
-    "@storybook/addon-interactions": "7.5.3",
-    "@storybook/addon-links": "^7.4.0",
+    "@storybook/addon-actions": "^7.6.14",
+    "@storybook/addon-docs": "^7.6.14",
+    "@storybook/addon-essentials": "^7.6.14",
+    "@storybook/addon-interactions": "^7.6.14",
+    "@storybook/addon-links": "^7.6.14",
     "@storybook/addon-onboarding": "1.0.8",
-    "@storybook/blocks": "7.5.3",
-    "@storybook/react": "^7.4.0",
-    "@storybook/react-vite": "^7.4.0",
+    "@storybook/blocks": "^7.6.14",
+    "@storybook/react": "^7.6.14",
+    "@storybook/react-vite": "^7.6.14",
     "@storybook/testing-library": "0.2.2",
     "@vitejs/plugin-react": "^1.3.2",
     "serve": "^13.0.4",
-    "storybook": "^7.4.0",
+    "storybook": "^7.6.14",
     "vite": "^4.4.9"
   }
 }
