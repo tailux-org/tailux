@@ -1,0 +1,56 @@
+{
+  "name": "@tailux/theme",
+  "version": "0.0.0",
+  "description": "The default theme for Tailux components",
+  "author": "Emiliano Murillo <emilianomurillo12@gmail.com>",
+  "homepage": "",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "tailwindcss",
+    "tailwind",
+    "components",
+    "react-components",
+    "tailwindcss-components",
+    "button"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**",
+    "config.js",
+    "config.d.ts",
+    "plugin.js",
+    "plugin.d.ts"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tailux-org/tailux.git",
+    "directory": "packages/core/theme"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "dev": "tsup src --watch --dts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tailux/tsconfig": "workspace:*",
+    "tailwindcss": "3.4.1"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.0.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}
