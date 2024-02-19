@@ -44,7 +44,9 @@
     "prepack": "clean-package",
     "postpack": "clean-package restore"
   },
-  "dependencies": {},
+  "dependencies": {
+    "color2k": "^2.0.3"
+  },
   "devDependencies": {
     "@tailux/tsconfig": "workspace:*",
     "tailwindcss": "3.4.1"
