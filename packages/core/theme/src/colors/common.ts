@@ -7,7 +7,7 @@ import { sapphireColor } from './palette/sapphire'
 import { sunflowerColor } from './palette/sunflower'
 import { type ColorScheme } from './types'
 
-export interface StaticColors {
+export interface CommonColors {
   abbey: ColorScheme
   sapphire: ColorScheme
   grape: ColorScheme
@@ -17,12 +17,12 @@ export interface StaticColors {
   jade: ColorScheme
 }
 
-export const staticColors: StaticColors = {
+export const commonColors: CommonColors = {
   abbey: abbeyColor,
   sapphire: sapphireColor,
   grape: grapeColor,
   magenta: magentaColor,
-  crimson: crimsonColor,
+  jade: jadeColor,
   sunflower: sunflowerColor,
-  jade: jadeColor
+  crimson: crimsonColor
 }
