@@ -28,6 +28,5 @@ export const sunflowerColor: ColorScheme = {
   860: '#342100',
   900: '#231600',
   950: '#110B00',
-  BASE: '#F39A00',
-  DEFAULT: '#F39A00'
+  BASE: '#F39A00'
 }

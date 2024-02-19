@@ -28,6 +28,5 @@ export const crimsonColor: ColorScheme = {
   860: '#310710',
   900: '#21050B',
   950: '#100205',
-  BASE: '#DF2A51',
-  DEFAULT: '#DF2A51'
+  BASE: '#DF2A51'
 }

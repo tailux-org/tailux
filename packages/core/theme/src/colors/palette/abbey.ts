@@ -28,6 +28,5 @@ export const abbeyColor: ColorScheme = {
   860: '#0C0C0D',
   900: '#060607',
   950: '#020202',
-  BASE: '#4E5058',
-  DEFAULT: '#4E5058'
+  BASE: '#4E5058'
 }

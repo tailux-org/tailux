@@ -28,6 +28,5 @@ export const jadeColor: ColorScheme = {
   860: '#0D2716',
   900: '#081A0F',
   950: '#040D07',
-  BASE: '#3AB467',
-  DEFAULT: '#3AB467'
+  BASE: '#3AB467'
 }

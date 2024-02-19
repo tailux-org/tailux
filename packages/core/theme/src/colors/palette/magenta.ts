@@ -28,6 +28,5 @@ export const magentaColor: ColorScheme = {
   860: '#260822',
   900: '#1A0517',
   950: '#0D030B',
-  BASE: '#B3249F',
-  DEFAULT: '#B3249F'
+  BASE: '#B3249F'
 }

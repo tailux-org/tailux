@@ -28,6 +28,5 @@ export const grapeColor: ColorScheme = {
   860: '#1E0A2B',
   900: '#14071D',
   950: '#0A030E',
-  BASE: '#8B2FC9',
-  DEFAULT: '#8B2FC9'
+  BASE: '#8B2FC9'
 }

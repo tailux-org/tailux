@@ -28,6 +28,5 @@ export const sapphireColor: ColorScheme = {
   860: '#001630',
   900: '#000F20',
   950: '#000710',
-  BASE: '#0068E0',
-  DEFAULT: '#0068E0'
+  BASE: '#0068E0'
 }
