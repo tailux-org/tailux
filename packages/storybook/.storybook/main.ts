@@ -13,7 +13,8 @@ const config: StorybookConfig = {
   stories: [
     '../stories/*.stories.@(js|jsx|mjs|ts|tsx)',
     '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
-    '../../components/**/*.stories.@(js|jsx|mjs|ts|tsx)'
+    '../../components/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+    '../../core/theme/stories/*.stories.@(js|jsx|mjs|ts|tsx)'
   ],
   addons: [
     getAbsolutePath('@storybook/addon-essentials'),
@@ -35,9 +36,8 @@ const config: StorybookConfig = {
       define: { 'process.env': {} }
     }
   },
-
   docs: {
-    autodocs: true
+    autodocs: 'tag'
   }
 }
 
