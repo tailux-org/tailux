@@ -14,7 +14,7 @@ function ColorItem(props: ColorItemProps) {
   const { bgColor, textColor, name } = props
   return (
     <li
-      className={`flex h-[110px] rounded-xl items-center justify-center shadow-inner`}
+      className={`flex h-[100px] rounded-xl items-center justify-center shadow-inner`}
       style={{
         backgroundColor: bgColor,
         color: textColor
@@ -38,7 +38,7 @@ function ColorSchemePreview(props: ColorSchemePreviewProps) {
   return (
     <section>
       <h2 className="text-2xl font-bold mb-4">{colorName}</h2>
-      <ul className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-3">
+      <ul className="grid grid-cols-[repeat(auto-fit,minmax(110px,1fr))] gap-3">
         {Object.entries(colorScheme).map(([tone, color]) => (
           <ColorItem
             key={tone}
