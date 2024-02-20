@@ -27,17 +27,18 @@ const config: StorybookConfig = {
     name: getAbsolutePath('@storybook/react-vite'),
     options: {}
   },
-
-  core: {},
+  docs: {
+    autodocs: 'tag'
+  },
+  core: {
+    disableTelemetry: true
+  },
   async viteFinal(config, { configType }) {
     // customize the Vite config here
     return {
       ...config,
       define: { 'process.env': {} }
     }
-  },
-  docs: {
-    autodocs: 'tag'
   }
 }
 
