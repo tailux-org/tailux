@@ -10,16 +10,16 @@ const parameters: Preview['parameters'] = {
     expanded: true
   },
   docs: {
-    source: {
-      excludeDecorators: true,
-      type: 'source'
-    },
-    toc: true
+    toc: {
+      contentsSelector: '.sbdocs-content',
+      headingSelector: 'h2, h3, h4',
+      disable: false
+    }
   },
   options: {
     storySort: {
       method: 'alphabetical',
-      order: ['Foundations', 'Components']
+      order: ['Welcome', 'Foundations', 'Components']
     }
   }
 }
