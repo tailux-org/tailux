@@ -1,8 +1,12 @@
 {
-  "**/*.{ts,tsx,js,jsx}": [
+  "**/*.{js,jsx,ts,tsx}": [
+    "prettier --write",
+    "pnpm run lint:fix"
+  ],
+  "**/*.{css,scss}": [
     "prettier --write"
   ],
-  "**/*.{md,mdx,yml,json,babelrc,eslintrc,prettierrc}": [
+  "**/*.{css,md,mdx,yml,yaml,czrc,json,babelrc,eslintrc,prettierrc}": [
     "prettier --write"
   ]
 }
