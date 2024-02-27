@@ -64,7 +64,7 @@ export function getIterableColorSchemeShades(colorScheme: ColorScheme) {
  * @returns The picked color.
  * @throws {Error} If the color scheme is undefined or if the color key is invalid.
  */
-export default function pickColor(
+export function pickColor(
   colorKey: keyof ColorScheme,
   colorScheme: ColorScheme
 ): string {
