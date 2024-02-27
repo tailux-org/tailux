@@ -1,4 +1,4 @@
-import pickColor, { swapColorScheme } from '../utils/object'
+import { swapColorScheme, pickColor } from '../utils/object'
 import { commonColors } from './common'
 import type { SemanticBaseColors, SemanticColors, ThemeColors } from './types'
 
