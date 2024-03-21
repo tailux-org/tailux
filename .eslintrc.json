@@ -13,6 +13,7 @@
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
+  "root": true,
   "parserOptions": {
     "ecmaVersion": "latest",
     "ecmaFeatures": {
@@ -43,6 +44,7 @@
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/return-await": "off",
+    "@typescript-eslint/no-var-requires": 0,
     "prettier/prettier": "warn"
   }
 }
