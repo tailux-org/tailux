@@ -1,6 +1,6 @@
-import { type ColorScheme } from '../types'
+import type { ColorScheme } from './types'
 
-export const magentaColor: ColorScheme = {
+const magentaColor: ColorScheme = {
   50: '#FCEDFA',
   100: '#F8DCF4',
   130: '#F5CAEF',
@@ -28,5 +28,7 @@ export const magentaColor: ColorScheme = {
   860: '#260822',
   900: '#1A0517',
   950: '#0D030B',
-  BASE: '#B3249F'
+  DEFAULT: '#B3249F'
 }
+
+export default magentaColor

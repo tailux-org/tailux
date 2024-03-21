@@ -1,6 +1,6 @@
-import { type ColorScheme } from '../types'
+import type { ColorScheme } from './types'
 
-export const grapeColor: ColorScheme = {
+const grapeColor: ColorScheme = {
   50: '#F7F0FB',
   100: '#EFE1F8',
   130: '#E7D2F4',
@@ -28,5 +28,7 @@ export const grapeColor: ColorScheme = {
   860: '#1E0A2B',
   900: '#14071D',
   950: '#0A030E',
-  BASE: '#8B2FC9'
+  DEFAULT: '#8B2FC9'
 }
+
+export default grapeColor

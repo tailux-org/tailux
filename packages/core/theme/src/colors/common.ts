@@ -1,23 +1,18 @@
-import { abbeyColor } from './palette/abbey'
-import { crimsonColor } from './palette/crimson'
-import { grapeColor } from './palette/grape'
-import { jadeColor } from './palette/jade'
-import { magentaColor } from './palette/magenta'
-import { sapphireColor } from './palette/sapphire'
-import { sunflowerColor } from './palette/sunflower'
-import { type ColorScheme } from './types'
+import type { ICommonColors } from './types'
+import abbeyColor from './abbey'
+import crimsonColor from './crimson'
+import grapeColor from './grape'
+import jadeColor from './jade'
+import magentaColor from './magenta'
+import sapphireColor from './sapphire'
+import sunflowerColor from './sunflower'
 
-export interface CommonColors {
-  abbey: ColorScheme
-  sapphire: ColorScheme
-  grape: ColorScheme
-  magenta: ColorScheme
-  crimson: ColorScheme
-  sunflower: ColorScheme
-  jade: ColorScheme
-}
-
-export const commonColors: CommonColors = {
+/**
+ * All common Tailux colors.
+ * These colors do not belong to a specific theme and will look the same in
+ * light and dark mode or in any custom theme.
+ */
+const commonColors: ICommonColors = {
   abbey: abbeyColor,
   sapphire: sapphireColor,
   grape: grapeColor,
@@ -26,3 +21,5 @@ export const commonColors: CommonColors = {
   sunflower: sunflowerColor,
   crimson: crimsonColor
 }
+
+export default commonColors

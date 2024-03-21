@@ -1,6 +1,6 @@
-import { type ColorScheme } from '../types'
+import type { ColorScheme } from './types'
 
-export const sunflowerColor: ColorScheme = {
+const sunflowerColor: ColorScheme = {
   50: '#FFF8EC',
   100: '#FFF1D9',
   130: '#FFEAC6',
@@ -28,5 +28,7 @@ export const sunflowerColor: ColorScheme = {
   860: '#342100',
   900: '#231600',
   950: '#110B00',
-  BASE: '#F39A00'
+  DEFAULT: '#F39A00'
 }
+
+export default sunflowerColor

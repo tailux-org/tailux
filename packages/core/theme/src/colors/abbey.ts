@@ -1,6 +1,6 @@
-import { type ColorScheme } from '../types'
+import type { ColorScheme } from './types'
 
-export const abbeyColor: ColorScheme = {
+const abbeyColor: ColorScheme = {
   50: '#F9F9F9',
   100: '#F2F3F5',
   130: '#EBEDEF',
@@ -28,5 +28,7 @@ export const abbeyColor: ColorScheme = {
   860: '#0C0C0D',
   900: '#060607',
   950: '#020202',
-  BASE: '#4E5058'
+  DEFAULT: '#4E5058'
 }
+
+export default abbeyColor

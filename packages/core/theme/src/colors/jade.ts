@@ -1,6 +1,6 @@
-import { type ColorScheme } from '../types'
+import type { ColorScheme } from './types'
 
-export const jadeColor: ColorScheme = {
+const jadeColor: ColorScheme = {
   50: '#F0FAF4',
   100: '#E2F6E9',
   130: '#D3F1DE',
@@ -28,5 +28,7 @@ export const jadeColor: ColorScheme = {
   860: '#0D2716',
   900: '#081A0F',
   950: '#040D07',
-  BASE: '#3AB467'
+  DEFAULT: '#3AB467'
 }
+
+export default jadeColor

@@ -1,6 +1,6 @@
-import { type ColorScheme } from '../types'
+import type { ColorScheme } from './types'
 
-export const crimsonColor: ColorScheme = {
+const crimsonColor: ColorScheme = {
   50: '#FDF1F3',
   100: '#FAE1E6',
   130: '#F8D1DA',
@@ -28,5 +28,7 @@ export const crimsonColor: ColorScheme = {
   860: '#310710',
   900: '#21050B',
   950: '#100205',
-  BASE: '#DF2A51'
+  DEFAULT: '#DF2A51'
 }
+
+export default crimsonColor

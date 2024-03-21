@@ -1,6 +1,6 @@
-import { type ColorScheme } from '../types'
+import type { ColorScheme } from './types'
 
-export const sapphireColor: ColorScheme = {
+const sapphireColor: ColorScheme = {
   50: '#EBF4FF',
   100: '#D6E9FF',
   130: '#C2DEFF',
@@ -28,5 +28,7 @@ export const sapphireColor: ColorScheme = {
   860: '#001630',
   900: '#000F20',
   950: '#000710',
-  BASE: '#0068E0'
+  DEFAULT: '#0068E0'
 }
+
+export default sapphireColor
