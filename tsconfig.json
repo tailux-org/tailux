@@ -1,5 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@tailux/tsconfig/base",
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
