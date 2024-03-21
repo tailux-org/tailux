@@ -1,0 +1,33 @@
+import { Meta, Unstyled, Source } from '@storybook/blocks'
+import { commonColors as common, semanticColors as semantic } from '../src'
+import { ColorSwatchList } from './components'
+import { commonSwatch, semanticSwatch } from './utils/'
+
+<Meta
+  title="Foundations/Colors"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true }
+    }
+  }}
+/>
+
+# Colors
+
+Colors are an essential aspect to achieve unique and attractive user interfaces. Tailux provides a wide range of colors to choose from. They are organized into two categories: `Common Colors` and `Semantic Colors`.
+
+## Common Colors
+
+Common colors are a set of global static colors, which means that they will look the same in all themes and modes (dark or light) and can be accessed from any theme. Each colour is represented using 27 different shades, allowing you to create components that meet Web Content Accessibility Guidelines (WCAG) standards.
+
+<Unstyled>
+  <ColorSwatchList colors={commonSwatch.colors} />
+</Unstyled>
+
+## Semantic Colors
+
+Semantic colors are dynamic and adjust according to the chosen theme, making it easier to create applications with light and dark modes. These colors can be overwritten in the plugin configuration to create new custom themes or customize the default ones
+
+<Unstyled>
+  <ColorSwatchList colors={semanticSwatch.colors} isSemantic />
+</Unstyled>
