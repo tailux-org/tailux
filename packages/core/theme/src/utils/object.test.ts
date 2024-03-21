@@ -1,20 +1,11 @@
-import type { ColorScheme } from '../colors'
-import { commonColors } from '../colors/common'
+import { commonColors, type ColorScheme } from '../colors'
 import {
-  getColorSchemeShades,
-  getIterableColorSchemeShades,
+  flattenObject,
+  removeDefaultKeys,
   swapColorScheme
-} from './object'
+} from '../utils/object'
 
 describe('utils object', () => {
-  test('getColorSchemeShades should get only the shades of a color scheme', () => {
-    const shades = getColorSchemeShades(commonColors.abbey)
-    const clearedColor = Object.entries(commonColors.abbey).filter(
-      ([key]) => !isNaN(Number(key))
-    )
-    expect(shades).toEqual(Object.fromEntries(clearedColor))
-  })
-
   test('swapColorScheme should swap the color scheme correctly', () => {
     const originalColor = Object.assign({}, commonColors.abbey)
     const swappedColor = swapColorScheme(commonColors.abbey)
@@ -46,14 +37,38 @@ describe('utils object', () => {
       860: originalColor[130],
       900: originalColor[100],
       950: originalColor[50],
-      BASE: originalColor.BASE
+      DEFAULT: originalColor.DEFAULT
     }
     expect(swappedColor).toEqual(expectedColor)
   })
 
-  test('getIterableColorSchemeShades should return the color scheme shades as an iterable', () => {
-    const iterableColor = getIterableColorSchemeShades(commonColors.abbey)
-    const shades = getColorSchemeShades(commonColors.abbey)
-    expect(iterableColor).toEqual(Object.entries(shades))
+  test('cleanObject should remove the -DEFAULT suffix from the keys', () => {
+    const obj = {
+      'key-DEFAULT': 'value',
+      'key1-DEFAULT': 'value1',
+      key2: 'value2'
+    }
+    const expectedObj = {
+      key: 'value',
+      key1: 'value1',
+      key2: 'value2'
+    }
+    expect(removeDefaultKeys(obj)).toEqual(expectedObj)
+  })
+
+  test('flattenObject should flatten the object correctly', () => {
+    const obj = {
+      key: {
+        key1: 'value1',
+        key2: 'value2',
+        DEFAULT: 'default-value'
+      }
+    }
+    const expectedObj = {
+      'key-key1': 'value1',
+      'key-key2': 'value2',
+      key: 'default-value'
+    }
+    expect(flattenObject(obj)).toEqual(expectedObj)
   })
 })
