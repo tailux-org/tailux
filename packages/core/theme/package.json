@@ -7,23 +7,23 @@
   "license": "MIT",
   "keywords": [
     "react",
-    "tailwindcss",
+    "plugin",
     "tailwind",
+    "tailwind-css",
     "components",
     "react-components",
-    "tailwindcss-components",
-    "button"
+    "tailwindcss-components"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
   "files": [
-    "dist/**",
-    "config.js",
-    "config.d.ts",
+    "dist",
     "plugin.js",
-    "plugin.d.ts"
+    "plugin.d.ts",
+    "colors.js",
+    "colors.d.ts"
   ],
   "publishConfig": {
     "access": "public",
@@ -35,9 +35,9 @@
     "directory": "packages/core/theme"
   },
   "scripts": {
-    "build": "tsup src --dts",
-    "build:fast": "tsup src",
-    "dev": "tsup src --watch --dts",
+    "build": "tsup --dts",
+    "build:fast": "tsup",
+    "dev": "tsup --watch --dts",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
@@ -45,10 +45,17 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "color2k": "^2.0.3"
+    "color": "4.2.3",
+    "color2k": "^2.0.3",
+    "deepmerge": "4.3.1",
+    "flat": "^5.0.2",
+    "lodash.get": "4.4.2"
   },
   "devDependencies": {
     "@tailux/tsconfig": "workspace:*",
+    "@types/color": "3.0.6",
+    "@types/flat": "^5.0.2",
+    "@types/lodash.get": "4.4.9",
     "tailwindcss": "3.4.1"
   },
   "peerDependencies": {
