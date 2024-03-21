@@ -1,8 +1,5 @@
 {
   "extends": "@tailux/tsconfig/react-library.json",
   "include": ["."],
-  "exclude": ["dist", "build", "node_modules"],
-  "compilerOptions": {
-    "lib": ["ESNext"]
-  }
+  "exclude": ["dist", "build", "node_modules"]
 }
