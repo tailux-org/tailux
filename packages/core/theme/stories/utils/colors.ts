@@ -37,6 +37,10 @@ function getCommonColors() {
 
 function getSemanticColors() {
   const secureZones = {
+    default: {
+      scope: [430, 560],
+      secureColor: 'text-white'
+    },
     primary: {
       scope: [500, 500],
       secureColor: 'text-white'
@@ -210,6 +214,11 @@ export const semanticSwatch: ColorSwatchListProps = {
         {
           color: 'danger',
           className: 'bg-danger',
+          textClassName: 'text-white'
+        },
+        {
+          color: 'default',
+          className: 'bg-default',
           textClassName: 'text-white'
         }
       ]

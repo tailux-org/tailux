@@ -42,12 +42,14 @@
   "dependencies": {},
   "devDependencies": {
     "@tailux/tsconfig": "workspace:*",
+    "@tailux/theme": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "peerDependencies": {
     "react": ">=18",
-    "react-dom": ">=18"
+    "react-dom": ">=18",
+    "@tailux/theme": ">=0"
   },
   "clean-package": "../../../clean-package.config.json"
 }

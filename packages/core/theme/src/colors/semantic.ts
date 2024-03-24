@@ -45,6 +45,10 @@ const semanticColors: DefaultSemanticColors = {
     surface3: commonColors.abbey[130],
     surface4: commonColors.abbey[160],
     surface5: commonColors.abbey[200],
+    default: {
+      ...commonColors.abbey,
+      DEFAULT: commonColors.abbey[860]
+    },
     primary: commonColors.sapphire,
     secondary: commonColors.grape,
     success: commonColors.jade,
@@ -70,6 +74,10 @@ const semanticColors: DefaultSemanticColors = {
     surface3: commonColors.abbey[700],
     surface4: commonColors.abbey[660],
     surface5: commonColors.abbey[630],
+    default: {
+      ...swapColorScheme(commonColors.abbey),
+      DEFAULT: commonColors.abbey[560]
+    },
     primary: swapColorScheme(commonColors.sapphire),
     secondary: swapColorScheme(commonColors.grape),
     success: swapColorScheme(commonColors.jade),

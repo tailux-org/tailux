@@ -151,6 +151,11 @@ export interface ISemanticColors {
   surface5: string
 
   /**
+   * The defualt color scheme.
+   */
+  default: ColorScheme
+
+  /**
    * The primary color scheme.
    */
   primary: ColorScheme
