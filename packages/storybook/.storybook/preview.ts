@@ -6,8 +6,8 @@ const parameters: Preview['parameters'] = {
   viewMode: 'docs',
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
-    disable: true,
-    expanded: true
+    // disable: true,
+    // expanded: true
   },
   docs: {
     toc: {

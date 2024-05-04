@@ -183,6 +183,14 @@ function corePlugin(
             subheading: `var(--${prefix}-line-height-subheading)`,
             heading: `var(--${prefix}-line-height-heading)`,
             'heading-large': `var(--${prefix}-line-height-heading-large)`
+          },
+          borderRadius: {
+            // small: `var(--${prefix}-border-radius-small)`,
+            // medium: `var(--${prefix}-border-radius-medium)`,
+            // large: `var(--${prefix}-border-radius-large)`
+            small: `calc(var(--${prefix}-radius) - 4px)`,
+            medium: `calc(var(--${prefix}-radius) - 2px)`,
+            large: `var(--${prefix}-radius)`
           }
         }
       }

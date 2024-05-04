@@ -152,8 +152,22 @@ export const resolveConfig = (
         )
         return
       }
+      let layoutVariable: string = ''
+      if (key === 'border-radius') {
+        const radiusValues = {
+          none: '0rem',
+          small: '0.313rem', // 5px
+          medium: '0.5rem', // 8px
+          large: '0.75rem' // 12px
+        }
+        layoutVariable = `--${prefix}-radius`
+        const radiusKey = value as keyof typeof radiusValues
+        resolved.utilities[cssSelector][layoutVariable] =
+          radiusValues[radiusKey] ?? radiusValues.medium
+        continue
+      }
       // eg. --tx-font-size
-      const layoutVariable = `--${prefix}-${key}`
+      layoutVariable = `--${prefix}-${key}`
       // eg. value = { ..., 'heading-large': '2rem' }
       if (typeof value === 'object') {
         // eg. nestedKey = 'large', nestedValue = '2rem'

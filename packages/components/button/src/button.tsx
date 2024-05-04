@@ -1,17 +1,25 @@
-import { forwardRef } from 'react'
+import { forwardRef } from '@tailux/system'
+import { useButton, type ButtonProps } from './use-button'
 
-export interface ButtonProps {
-  children: React.ReactNode
-  [key: string]: any
-}
-
-const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
-  const { children, ...rest } = props
+const Button = forwardRef<'button', ButtonProps>((props, ref) => {
+  const {
+    Component,
+    children,
+    isLoading,
+    isDisabled,
+    domRef,
+    styles,
+    htmlPrefix,
+    ...rest
+  } = useButton({
+    ...props,
+    ref
+  })
 
   return (
-    <button ref={ref} {...rest}>
+    <Component className={styles} ref={domRef} {...rest}>
       {children}
-    </button>
+    </Component>
   )
 })
 

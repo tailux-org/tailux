@@ -4,22 +4,67 @@ import { Button, type ButtonProps } from '../src'
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
-  argTypes: {}
+  tags: ['autodocs'],
+  argTypes: {
+    children: { control: 'text', defaultValue: 'Button' },
+    variant: {
+      control: {
+        type: 'select'
+      },
+      defaultValue: 'solid',
+      options: [
+        'solid',
+        'outlined',
+        'shadow',
+        'flat',
+        'flat-outlined',
+        'ghost',
+        'text'
+      ]
+    },
+    color: {
+      control: {
+        type: 'select'
+      },
+      defaultValue: 'primary',
+      options: [
+        'default',
+        'primary',
+        'secondary',
+        'success',
+        'warning',
+        'danger'
+      ]
+    },
+    size: {
+      control: {
+        type: 'select'
+      },
+      defaultValue: 'md',
+      options: ['xs', 'sm', 'md', 'lg', 'xl']
+    },
+    radius: {
+      control: {
+        type: 'select'
+      },
+      defaultValue: 'md',
+      options: ['none', 'sm', 'md', 'lg', 'full']
+    },
+    isLoading: { control: 'boolean', defaultValue: false }
+  }
 }
 
 export default meta
 
 type Story = StoryObj<typeof Button>
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/react/api/csf
- * to learn how to use render functions.
- */
 export const Default: Story = {
-  render: (props: any) => <Button {...props}>{props.children}</Button>,
-  name: 'Button',
   args: {
-    children: 'Hello @tailux'
+    children: 'Button',
+    variant: 'solid',
+    color: 'default',
+    size: 'md',
+    radius: 'md',
+    isLoading: false
   } satisfies ButtonProps
 }

@@ -4,45 +4,24 @@ import type { ISemanticColors } from './colors'
  * The base unit sizes for any token that uses a small, medium and large size.
  */
 export interface BaseUnit {
-  /**
-   * Small font size
-   */
   small: string
-  /**
-   * Medium font size
-   */
   medium: string
-  /**
-   * Large font size
-   */
   large: string
 }
+
+/**
+ * The border radius scale.
+ */
+export type BorderRadiusScale = 'none' | 'small' | 'medium' | 'large'
 
 /**
  * Font scale with different sizes for text elements.
  */
 export interface FontScale extends BaseUnit {
-  /**
-   * The smallest font size.
-   *
-   * Used for small text elements like labels and captions.
-   */
   tiny: string
-  /**
-   * Handles the font size for large text elements
-   */
   huge: string
-  /**
-   * Handles the font size for subheadings
-   */
   subheading: string
-  /**
-   * Handles the font size for headings
-   */
   heading: string
-  /**
-   * Handles the font size for extra large headings
-   */
   'heading-large': string
 }
 
@@ -50,14 +29,9 @@ export interface FontScale extends BaseUnit {
  * The layout theme configuration.
  */
 export interface LayoutTheme {
-  /**
-   * The font sizes for text elements
-   */
   fontSize: Partial<FontScale>
-  /**
-   * The line height for text elements
-   */
   lineHeight: Partial<FontScale>
+  borderRadius: BorderRadiusScale
 }
 
 export type ColorsTheme = ISemanticColors &
@@ -67,13 +41,7 @@ export type ColorsTheme = ISemanticColors &
  * The base theme interface. All themes extend from this interface.
  */
 export interface BaseTheme {
-  /**
-   * The global layout tokens for the theme.
-   */
   layout: Partial<LayoutTheme>
-  /**
-   * The semantic colors for the theme.
-   */
   colors: Partial<ColorsTheme>
 }
 
@@ -99,13 +67,6 @@ export type DefaultThemesType = 'light' | 'dark'
  */
 export type DefaultThemes = DynamicTheme<BaseTheme>
 
-// export interface CustomTheme extends Partial<BaseTheme> {
-//   /**
-//    * Specifies the default theme to extend from.
-//    */
-//   extendFrom?: DefaultThemesType
-// }
-
 /**
  * Custom theme configuration. Represents a dynamic theme that can be either 'light' or 'dark'.
  */
@@ -114,7 +75,6 @@ export type CustomTheme = Partial<DynamicTheme>
 /**
  * Record of custom themes.
  */
-// export type CustomThemes = Record<string, Partial<CustomTheme>>
 export type CustomThemes = Record<string, CustomTheme>
 
 /**

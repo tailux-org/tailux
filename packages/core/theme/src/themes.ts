@@ -25,7 +25,8 @@ export const defaultLayout: LayoutTheme = {
     subheading: '2rem',
     heading: '2.25rem',
     'heading-large': '2.75rem'
-  }
+  },
+  borderRadius: 'medium'
 }
 
 /**
